@@ -48,5 +48,8 @@ class Call{
         return new Call($result[0]["id"], $result[0]["room"], $result[0]["issue"], $result[0]["dateTime"]);
     }
 
+    public function destroy(){
+        $query = $this->database->mysql->query("DELETE FROM {$this->table} WHERE {$this->table}.id = {$this->id}");
+    }
 }
 ?>
