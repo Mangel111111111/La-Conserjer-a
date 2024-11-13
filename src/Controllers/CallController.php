@@ -14,6 +14,12 @@
                 return;
             }
 
+            if(isset($_GET["action"]) && (isset($_GET["action"]) == "store")){
+                $this->store($_POST);
+                return;
+            }
+
+
             $this->index();
         }
 

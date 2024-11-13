@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: #503530;
+    width: 100%;
+    height: 100px;
+    gap: 15rem;
+   
+}
+
+.imgHeader{
+    height: 70px;
+}
+
+#addButton {
+    transition: transform 0.5s ease;
+}
+
+#addButton:hover {
+    transform: scale(1.3);
+}
