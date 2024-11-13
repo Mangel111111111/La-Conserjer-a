@@ -19,7 +19,7 @@
                 return;
             }
             
-            if(isset($_GET["action"]) && ($_GET["action"] == "create")) {
+            if(isset($_GET["action"]) && (isset($_GET["action"]) == "create")) {
                 $this->create();
                 return;
             }
@@ -44,6 +44,9 @@
             $call = $callDelete->findById($id);
             $call ->destroy();
             $this ->index();
+        }
+        public function create() {
+            new View("callCreate");
         }
     }
 

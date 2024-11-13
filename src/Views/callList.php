@@ -10,7 +10,7 @@
 
         <div>
             <a href="?action=create">
-                <button type="button" class="btn btn-success">Add problem</button>
+                <button type="button">+</button>
             </a>
         </div>
 
