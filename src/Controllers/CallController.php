@@ -16,6 +16,12 @@
            $calls = $call->all();
            new View("callList", ["call" => $calls]);
         }
+
+        public function store(array $request){
+            $newCall = new Call(null, $request["room"], $request["issue"], null);
+            $newCall->save();
+            $this->index();
+        }
     }
 
 ?>

@@ -36,5 +36,9 @@ class Call{
 
         return $callList;
     }
+
+    public function save(){
+        $this->database->mysql->query("INSERT INTO {$this->table} (`room`, `issue`) VALUES ('$this->room','$this->issue')");
+    }
 }
 ?>
