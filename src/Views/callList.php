@@ -7,7 +7,45 @@
     require_once("Components/header.php")
 ?>
     <main>
+        <h1>
+            tabla
+        </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Room</th>
+                    <th>Issue</th>
+                    <th>Date</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <?php  
+                    foreach($data["call"] as $call){
+                        echo "
+                            <tr>
+                                <td>{$call->id}</td>
+                                <td>{$call->room}</td>
+                                <td>{$call->issue}</td>
+                                <td>{$call->dateTime}</td>
 
+                                <td>
+                                    <a href='?action=delete&id={$call->id}'>
+                                        <button type='button'>Delete</button>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href='?action=update&id={$call->id}'>
+                                        <button type='button'>Update</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        ";
+                    }
+                ?>
+            </tbody>
+        </table>
     </main>
     <?php
     require_once("Components/footer.php")
