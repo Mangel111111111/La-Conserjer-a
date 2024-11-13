@@ -1,3 +1,10 @@
 <?php
-echo "index del source";
+
+namespace App;
+
+use App\Controllers\CallController;
+
+$controller = new CallController;
+
 ?>
+
