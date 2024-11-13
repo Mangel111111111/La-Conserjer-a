@@ -8,6 +8,18 @@
     class CallController {
 
         public function __construct(){
+            
+            if(isset($_GET["action"]) && (isset($_GET["action"]) == "delete")){
+                $this->delete($_GET["id"]);
+                return;
+            }
+
+            if(isset($_GET["action"]) && (isset($_GET["action"]) == "store")){
+                $this->store($_POST);
+                return;
+            }
+
+
             $this->index();
         }
 
@@ -21,6 +33,13 @@
             $newCall = new Call(null, $request["room"], $request["issue"], null);
             $newCall->save();
             $this->index();
+        }
+        
+        public function delete($id){
+            $callDelete = new Call;
+            $call = $callDelete->findById($id);
+            $call ->destroy();
+            $this ->index();
         }
     }
 
