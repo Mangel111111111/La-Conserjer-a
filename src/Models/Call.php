@@ -48,7 +48,7 @@ class Call{
     }
 
     public function destroy(){
-        $query = $this->database->mysql->query("DELETE FROM {$this->table} WHERE `{$this->table}`.`id` = {$this->id}");
+        $query = $this->database->mysql->query("DELETE FROM {$this->table} WHERE {$this->table}.id = {$this->id}");
     }
 }
 ?>
