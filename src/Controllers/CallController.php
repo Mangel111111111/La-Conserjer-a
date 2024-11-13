@@ -18,7 +18,11 @@
                 $this->store($_POST);
                 return;
             }
-
+            
+            if(isset($_GET["action"]) && ($_GET["action"] == "create")) {
+                $this->create();
+                return;
+            }
 
             $this->index();
         }

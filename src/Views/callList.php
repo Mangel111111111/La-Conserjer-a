@@ -7,16 +7,20 @@
     require_once("Components/header.php")
 ?>
     <main>
-        <h1>
-            tabla
-        </h1>
+
+        <div>
+            <a href="?action=create">
+                <button type="button" class="btn btn-success">Add problem</button>
+            </a>
+        </div>
+
         <table>
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Room</th>
-                    <th>Issue</th>
-                    <th>Date</th>
+                    <th>Nº de Habitación</th>
+                    <th>Incidencia</th>
+                    <th>Fecha</th>
                     
                 </tr>
             </thead>
