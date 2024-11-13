@@ -36,5 +36,12 @@ class Call{
 
         return $callList;
     }
+
+    public function findById($id){
+        $query = $this->database->mysql->query("SELECT * FROM {$this->table} WHERE 'Id'=($id)");
+        $result = $query->fetchAll();
+
+        return new Call($result[0]["id"], $result[1]["room"], $result[2]["issue"], $result[3]["dateTime"]);
+    }
 }
 ?>
