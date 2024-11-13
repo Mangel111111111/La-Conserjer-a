@@ -38,7 +38,7 @@ class Call{
     }
 
     public function save(){
-        $this->database->mysql->query("INSERT INTO {$this->table} (`room`, `issue`) VALUES ('$this->room','$this->issue')");
+        $query = $this->database->mysql->query("INSERT INTO {$this->table} (`room`, `issue`) VALUES ('$this->room','$this->issue')");
     }
     public function findById($id){
         $query = $this->database->mysql->query("SELECT * FROM {$this->table} WHERE 'Id'=($id)");
