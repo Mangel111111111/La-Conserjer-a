@@ -7,12 +7,13 @@
     require_once("Components/header.php")
 ?>
     <main>
-
+        
         <div>
-            <a href="?action=create">
-                <button type="button">+</button>
+            <a href='?action=create'>
+                <button type='button'>TEstttt</button>
             </a>
         </div>
+            
 
         <table>
             <thead>

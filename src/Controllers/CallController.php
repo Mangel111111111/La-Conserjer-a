@@ -8,6 +8,12 @@
     class CallController {
 
         public function __construct(){
+
+            
+            if(isset($_GET["action"]) && (isset($_GET["action"]) == "create")) {
+                $this->create();
+                return;
+            }
             
             if(isset($_GET["action"]) && (isset($_GET["action"]) == "delete")){
                 $this->delete($_GET["id"]);
@@ -19,10 +25,7 @@
                 return;
             }
             
-            if(isset($_GET["action"]) && (isset($_GET["action"]) == "create")) {
-                $this->create();
-                return;
-            }
+            
 
             $this->index();
         }
@@ -45,6 +48,7 @@
             $call ->destroy();
             $this ->index();
         }
+
         public function create() {
             new View("callCreate");
         }
