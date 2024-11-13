@@ -36,5 +36,15 @@ class Call{
 
         return $callList;
     }
+
+    public function save(){
+        $this->database->mysql->query("INSERT INTO {$this->table} (`room`, `issue`) VALUES ('$this->room','$this->issue')");
+    }
+    public function findById($id){
+        $query = $this->database->mysql->query("SELECT * FROM {$this->table} WHERE 'Id'=($id)");
+        $result = $query->fetchAll();
+
+        return new Call($result[0]["id"], $result[0]["room"], $result[0]["issue"], $result[0]["dateTime"]);
+    }
 }
 ?>
