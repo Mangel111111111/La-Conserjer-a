@@ -10,7 +10,7 @@
         
         <div>
             <a href='?action=create'>
-                <button type='button'>TEstttt</button>
+                <button type='button'>Crear nuevo</button>
             </a>
         </div>
             
