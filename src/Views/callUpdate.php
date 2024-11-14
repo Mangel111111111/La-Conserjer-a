@@ -8,40 +8,28 @@
     ?>
 
     <main>
-        <h2>Añadir nueva incidencia</h2>
-
-        <a href="./index.php">
-            <button type="button" id="button-cancel" >Cancelar</button>
-        </a>
+        <h2>MODIFICAR INCIDENCIA</h2>
 
         <form action="?action=updateSQL&id=<?php echo $data['call']->id; ?>" method="post">
-            <div> 
+            <div id="span">
                 <span>Id</span>
-                <input type="text" name="room" readonly value="<?php echo $data['call']->id; ?>">
-            </div>
-
-            <div>
                 <span>Nº de Habitación</span>
-                <input type="text" name="room" required value="<?php echo $data['call']->room; ?>">
-            </div>
-
-            <div>
                 <span>Incidencia</span>
-                <textarea area-label="Width textarea" type="text" name="issue" required ><?php echo $data['call']->issue; ?></textarea>
-            </div>
-
-            <div>
                 <span>Fecha</span>
+                <span>Confirmar</span>
+            </div>
+
+            <div id="input">
+                <input type="text" name="room" readonly value="<?php echo $data['call']->id; ?>">
+                <input type="text" name="room" required value="<?php echo $data['call']->room; ?>">
+                <textarea area-label="Width textarea" type="text" name="issue" required ><?php echo $data['call']->issue; ?></textarea>
                 <input type="date" name="dateTime" required value="<?php echo $data['call']->dateTime; ?>">
+                <input type="submit" id="buttonConfirm" value="">
             </div>
 
-            <div>
-                <input type="submit" value="Confirmar">
-                <input type="reset" value="Borrar">
-            </div>
+            <input type="reset" value="Limpiar" id="buttonReseat" readonly>
+           
         </form>
-
-
     </main>
 
     <?php
