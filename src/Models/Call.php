@@ -54,6 +54,6 @@ class Call{
     }
 
     public function update(){
-        $query = $this->database->mysql->query("UPDATE {$this->table} SET room='$this->room' , issue='$this->issue', dateTime='$this->room' WHERE id='$this->id'");
+        $query = $this->database->mysql->query("UPDATE {$this->table} SET room='$this->room' , issue='$this->issue', dateTime='$this->dateTime' WHERE id='$this->id'");
     }
 }

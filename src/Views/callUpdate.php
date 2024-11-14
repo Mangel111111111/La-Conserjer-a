@@ -14,10 +14,10 @@
             <button type="button" id="button-cancel" >Cancelar</button>
         </a>
 
-        <form action="?action=updateSQL" method="post">
+        <form action="?action=updateSQL&id=<?php echo $data['call']->id; ?>" method="post">
             <div> 
                 <span>Id</span>
-                <p><?php echo $data['call']->id; ?></p>
+                <input type="text" name="room" readonly value="<?php echo $data['call']->id; ?>">
             </div>
 
             <div>

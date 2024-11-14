@@ -30,7 +30,7 @@
                 return;
             }
             if(isset($_GET["action"]) && ($_GET["action"]) == "updateSQL"){
-                $this->updateSQL($_POST);
+                $this->updateSQL($_POST, $_GET["id"]);
                 return;
             }
             
@@ -84,11 +84,12 @@
 
         }
 
-        public function updateSQL(array $request) {
-            
-            $updateCall = new Call($request["id"], $request["room"], $request["issue"], $request["dateTime"]);
+        public function updateSQL(array $request, $id) {
+            $updateCall = new Call( $id, $request["room"], $request["issue"], $request["dateTime"]);
             $updateCall->update();
-
+            
+            header("Location: ./index.php");
+            exit();
 
         }
     }
