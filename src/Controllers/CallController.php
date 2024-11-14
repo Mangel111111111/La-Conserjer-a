@@ -40,10 +40,13 @@
 
         public function store(array $request){
 
-            $newCall = new Call(null, $request["room"], $request["issue"], null);
+            $newCall = new Call(null, $request["room"], $request["issue"], $request["dateTime"]);
             $newCall->save();
 
-            $this->index();
+            header("Location: ./index.php");
+            exit();
+
+            
         }
         
         public function delete($id){
@@ -51,8 +54,9 @@
             $call = $callDelete->findById($id);
             $call ->destroy();
 
-            $this ->index();
-            
+            header("Location: ./index.php");
+            exit();
+
         }
 
         public function create() {
