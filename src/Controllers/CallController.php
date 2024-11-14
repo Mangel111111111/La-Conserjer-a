@@ -24,6 +24,15 @@
                 $this->store($_POST);
                 return;
             }
+
+            if(isset($_GET["action"]) && ($_GET["action"]) == "update"){
+                $this->update($_GET["id"]);
+                return;
+            }
+            if(isset($_GET["action"]) && ($_GET["action"]) == "updateSQL"){
+                $this->updateSQL($_POST);
+                return;
+            }
             
             $this->index();
         }
@@ -64,6 +73,24 @@
             new View("callCreate");
 
         }
+
+        public function update($id) {
+
+            $callUpdate = new Call;
+            $call = $callUpdate->findById($id);
+
+            new View("callUpdate", ["call" => $call]);
+
+
+        }
+
+        public function updateSQL(array $request) {
+            
+            $updateCall = new Call($request["id"], $request["room"], $request["issue"], $request["dateTime"]);
+            $updateCall->update();
+
+
+        }
     }
 
-?>
+

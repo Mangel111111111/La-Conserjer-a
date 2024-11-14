@@ -41,6 +41,7 @@ class Call{
     public function save(){
         $query = $this->database->mysql->query("INSERT INTO {$this->table} (`room`, `issue`, `dateTime`) VALUES ('$this->room','$this->issue', '$this->dateTime')");
     }
+
     public function findById($id){
         $query = $this->database->mysql->query("SELECT * FROM {$this->table} WHERE id=($id)");
         $result = $query->fetchAll();
@@ -51,5 +52,8 @@ class Call{
     public function destroy(){
         $query = $this->database->mysql->query("DELETE FROM {$this->table} WHERE {$this->table}.id = {$this->id}");
     }
+
+    public function update(){
+        $query = $this->database->mysql->query("UPDATE {$this->table} SET room='$this->room' , issue='$this->issue', dateTime='$this->room' WHERE id='$this->id'");
+    }
 }
-?>
