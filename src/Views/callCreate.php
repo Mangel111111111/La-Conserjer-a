@@ -8,32 +8,25 @@
     ?>
 
     <main>
-        <h2>Añadir nueva incidencia</h2>
-
-        <a href="./index.php">
-            <button type="button" id="button-cancel" >Cancelar</button>
-        </a>
+        <h2>AÑADIR UNA NUEVA INCIDENCIA</h2>
 
         <form action="?action=store" method="post">
-            <div>
+            <div id="span">
                 <span>Nº de Habitación</span>
-                <input type="text" name="room" required placeholder="Nº de Habitación">
-            </div>
-
-            <div>
                 <span>Incidencia</span>
-                <textarea area-label="Width textarea" type="text" name="issue" required placeholder="Descripción de la incidencia"></textarea>
-            </div>
-
-            <div>
                 <span>Fecha</span>
-                <input type="date" name="dateTime" required>
+                <span>Confirmar</span>
             </div>
 
-            <div>
-                <input type="submit" value="Confirmar">
-                <input type="reset" value="Borrar">
+            <div id="input">
+                <input type="text" name="room" required placeholder="Nº de Habitación">
+                <textarea area-label="Width textarea" type="text" name="issue" required placeholder="Descripción de la incidencia"></textarea>
+                <input type="date" name="dateTime" required>
+                <input type="submit" id="buttonConfirm" value="">
             </div>
+
+            <input type="reset" value="Limpiar" id="buttonReseat" readonly>
+
         </form>
     </main>
 

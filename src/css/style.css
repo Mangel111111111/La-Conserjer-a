@@ -1,7 +1,26 @@
 @import url(footer.css);
 @import url(header.css);
+@import url(forms.css);
+
+:root {
+  --lightBrown: #ede8ea;
+  --brown: #503530;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh;
+}

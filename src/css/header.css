@@ -12,6 +12,11 @@ header {
 
 .imgHeader{
     height: 70px;
+    transition: transform 0.5s ease;
+}
+
+#logoHeader:hover {
+    transform: scale(1.2);
 }
 
 #addButton {
