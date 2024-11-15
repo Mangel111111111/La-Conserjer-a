@@ -1,41 +1,40 @@
-footer{
-    background-color: #503530;
-    color: white;
-    padding: 20px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+footer {
+  background-color: var(--brown);
+  color: var(--white);
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
-  
-.footerContent{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
-  
-.icons{
-    display: flex;
-    justify-content: flex-start;
-    gap: 15px;
+
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
 }
-  
-.githubIcon{
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
+
+.githubIcon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
 }
-  
-.githubIcon:hover{
-    transform: scale(1.2);
+
+.githubIcon:hover {
+  transform: scale(1.2);
 }
-  
-.footerText{
-    flex-grow: 1;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    padding-right: 180px;
+
+.footerText {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding-right: 180px;
 }
-  

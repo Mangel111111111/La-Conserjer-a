@@ -40,32 +40,33 @@ textarea {
 }
 
 #buttonReseat {
-    background: white;
-    border: 0;
-    color: var(--brown);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
-    padding: 0.5rem;
-    align-self: flex-end;
-    margin-right: 16%;
-    transition: transform 0.5s ease;
-    width: 100px;
-    cursor: pointer;
-    text-align: center;
+  background: var(--white);
+  border: 0;
+  color: var(--brown);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+  padding: 0.5rem;
+  align-self: flex-end;
+  margin-right: 16%;
+  transition: transform 0.5s ease;
+  width: 100px;
+  cursor: pointer;
+  text-align: center;
 }
 
 #buttonReseat:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 #buttonConfirm {
   width: 3rem;
-  height: 3rem; 
-  background: url("../../public/img/icons/confirmIconBlack.png") no-repeat center center; 
-  background-size: cover; 
-  cursor: pointer; 
+  height: 3rem;
+  background: url("../../public/img/icons/confirmIconBlack.png") no-repeat
+    center center;
+  background-size: cover;
+  cursor: pointer;
   transition: transform 0.5s ease;
 }
 
 #buttonConfirm:hover {
-    transform: scale(1.4);
+  transform: scale(1.4);
 }

@@ -1,28 +1,27 @@
 header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    background-color: #503530;
-    width: 100%;
-    height: 100px;
-    gap: 15rem;
-   
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--brown);
+  width: 100%;
+  height: 100px;
+  gap: 15rem;
 }
 
-.imgHeader{
-    height: 70px;
-    transition: transform 0.5s ease;
+.imgHeader {
+  height: 70px;
+  transition: transform 0.5s ease;
 }
 
 #logoHeader:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 #addButton {
-    transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 #addButton:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }

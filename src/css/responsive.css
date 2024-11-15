@@ -1,0 +1,80 @@
+@media (max-width: 768px) {
+  #list {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .imgHeader {
+    width: 100px;
+  }
+
+  #addButton {
+    width: 80px;
+  }
+
+  #logoHeader {
+    width: 80px;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footerText {
+    font-size: 12px;
+    padding-right: 0;
+  }
+
+  thead, tbody, th, td {
+    display: block;
+    text-align: center;
+    min-width: auto;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  th, td {
+    text-align: center;
+    padding: 5px;
+    font-size: 0.9rem;
+    min-width: auto;
+  }
+
+  .delete, .update {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imgHeader, .githubIcon {
+    width: 30px;
+  }
+
+  #addButton {
+    width: 30px;
+  }
+
+  .footerText {
+    font-size: 10px;
+  }
+
+  th, td {
+    font-size: 0.8rem;
+  }
+}

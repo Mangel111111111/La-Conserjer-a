@@ -9,8 +9,7 @@
 
         public function __construct(){
 
-            
-            if(isset($_GET["action"]) && ($_GET["action"]) == "create") {
+            if(isset($_GET["action"]) && ($_GET["action"]) == "create"){
                 $this->create();
                 return;
             }
@@ -29,33 +28,28 @@
                 $this->update($_GET["id"]);
                 return;
             }
+
             if(isset($_GET["action"]) && ($_GET["action"]) == "updateSQL"){
                 $this->updateSQL($_POST, $_GET["id"]);
                 return;
             }
-            
+
             $this->index();
         }
 
         public function index(){
-
            $call = new Call;
            $calls = $call->all();
 
            new View("callList", ["call" => $calls]);
-           
-        
         }
 
         public function store(array $request){
-
             $newCall = new Call(null, $request["room"], $request["issue"], $request["dateTime"]);
             $newCall->save();
 
             header("Location: ./index.php");
             exit();
-
-            
         }
         
         public function delete($id){
@@ -68,29 +62,23 @@
 
         }
 
-        public function create() {
-
+        public function create(){
             new View("callCreate");
-
         }
 
-        public function update($id) {
-
+        public function update($id){
             $callUpdate = new Call;
             $call = $callUpdate->findById($id);
 
             new View("callUpdate", ["call" => $call]);
-
-
         }
 
-        public function updateSQL(array $request, $id) {
+        public function updateSQL(array $request, $id){
             $updateCall = new Call( $id, $request["room"], $request["issue"], $request["dateTime"]);
             $updateCall->update();
             
             header("Location: ./index.php");
             exit();
-
         }
     }
 

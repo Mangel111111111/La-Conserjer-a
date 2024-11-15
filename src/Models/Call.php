@@ -13,8 +13,7 @@ class Call{
     private $database;
     private $table = "problems";
 
-    public function __construct($id=null, $room="", $issue="", $dateTime=null)
-    {
+    public function __construct($id=null, $room="", $issue="", $dateTime=null){
         $this->id = $id;
         $this->room = $room;
         $this->issue = $issue;
@@ -64,7 +63,6 @@ class Call{
             $callItem = new Call($call["id"],$call["room"],$call["issue"],$call["dateTime"]);
             array_push($callList, $callItem);
         }
-
         return $callList;
     }
 

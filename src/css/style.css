@@ -2,10 +2,12 @@
 @import url(header.css);
 @import url(forms.css);
 @import url(table.css);
+@import url(responsive.css);
 
 :root {
   --lightBrown: #ede8ea;
   --brown: #503530;
+  --white: white;
 }
 
 * {

@@ -26,7 +26,6 @@
             </div>
 
             <input type="reset" value="Limpiar" id="buttonReseat" readonly>
-
         </form>
     </main>
 
