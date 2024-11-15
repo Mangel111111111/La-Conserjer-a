@@ -2,7 +2,7 @@
 
     namespace tests;
 
-    use PHPUnit\Framework\TestCase
+    use PHPUnit\Framework\TestCase;
     use App\Models\Call;
 
     class CallTest extends TestCase{
