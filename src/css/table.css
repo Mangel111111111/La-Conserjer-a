@@ -1,0 +1,65 @@
+#list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    min-height: 60vh;
+}
+
+table{
+    width: 80%;
+    border-collapse: collapse;
+}
+
+thead{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+tbody{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+th{
+    min-width: 20vh;
+}
+
+td{
+    
+    max-width: 100vh;
+    min-width: 28vh;
+}
+
+tr{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+}
+
+.delete{
+    width: 50px; 
+    transition: transform 0.5s ease
+}
+
+.delete:hover {
+    transform: scale(1.4);
+}
+
+.update{
+    width: 50px; 
+    transition: transform 0.5s ease;
+}
+
+.update:hover {
+    transform: scale(1.4);
+}
