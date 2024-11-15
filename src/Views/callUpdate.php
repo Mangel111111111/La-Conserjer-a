@@ -14,25 +14,25 @@
             <button type="button" id="button-cancel" >Cancelar</button>
         </a>
 
-        <form action="?action=updateSQL&id=<?php echo $data['call']->id; ?>" method="post">
+        <form action="?action=updateSQL&id=<?php echo $data['call']->getId(); ?>" method="post">
             <div> 
                 <span>Id</span>
-                <input type="text" name="room" readonly value="<?php echo $data['call']->id; ?>">
+                <input type="text" name="room" readonly value="<?php echo $data['call']->getId(); ?>">
             </div>
 
             <div>
                 <span>Nº de Habitación</span>
-                <input type="text" name="room" required value="<?php echo $data['call']->room; ?>">
+                <input type="text" name="room" required value="<?php echo $data['call']->getRoom(); ?>">
             </div>
 
             <div>
                 <span>Incidencia</span>
-                <textarea area-label="Width textarea" type="text" name="issue" required ><?php echo $data['call']->issue; ?></textarea>
+                <textarea area-label="Width textarea" type="text" name="issue" required ><?php echo $data['call']->getIssue(); ?></textarea>
             </div>
 
             <div>
                 <span>Fecha</span>
-                <input type="date" name="dateTime" required value="<?php echo $data['call']->dateTime; ?>">
+                <input type="date" name="dateTime" readonly value="<?php echo $data['call']->getDateTime(); ?>">
             </div>
 
             <div>
