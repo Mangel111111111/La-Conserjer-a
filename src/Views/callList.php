@@ -3,6 +3,50 @@
 ?>
 
 <body>
+<<<<<<< HEAD
+=======
+<?php
+    require_once("Components/header.php")
+?>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nº de Habitación</th>
+                    <th>Incidencia</th>
+                    <th>Fecha</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <?php  
+                    foreach($data["call"] as $call){
+                        echo "
+                            <tr>
+                                <td>{$call->getId()}</td>
+                                <td>{$call->getRoom()}</td>
+                                <td>{$call->getIssue()}</td>
+                                <td>{$call->getDateTime()}</td>
+
+                                <td>
+                                    <a href='?action=delete&id={$call->getId()}'>
+                                        <button type='button'>Delete</button>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href='?action=update&id={$call->getId()}'>
+                                        <button type='button'>Update</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        ";
+                    }
+                ?>
+            </tbody>
+        </table>
+    </main>
+>>>>>>> origin/dev
     <?php
         require_once("Components/header.php")
     ?>

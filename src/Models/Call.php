@@ -5,13 +5,13 @@ namespace App\Models;
 use App\DataBase;
 
 class Call{
-    public ?int $id;
-    public string $room;
-    public string $issue;
-    public ?string $dateTime;
+    private ?int $id;
+    private string $room;
+    private string $issue;
+    private ?string $dateTime;
 
-    public $database;
-    public $table = "problems";
+    private $database;
+    private $table = "problems";
 
     public function __construct($id=null, $room="", $issue="", $dateTime=null)
     {
@@ -23,6 +23,36 @@ class Call{
         if(!$this->database){
             $this->database= new Database();
         }
+    }
+
+    public function getId(){
+        return $this->id;
+    }
+
+    public function setId($id){
+        $this->id = $id;
+    }
+
+    public function getRoom(){
+        return $this->room;
+    }
+    public function setRoom($room){
+        $this->room = $room;
+    }
+
+    public function getIssue(){
+        return $this->issue;
+    }
+
+    public function setIssue($issue){
+        $this->issue = $issue;
+    }
+
+    public function getDateTime(){
+        return $this->dateTime;
+    }
+    public function setDateTime($dateTime){
+        $this->dateTime = $dateTime;
     }
     
     public function all(){
